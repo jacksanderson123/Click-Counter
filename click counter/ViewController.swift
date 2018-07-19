@@ -11,20 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     
     var count = 0
-    var lblCount: UILabel!
-    var lblIncrement: UILabel!
+    
+    @IBOutlet var lblCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    @objc private func decrementCount(){
+    
+    @IBAction private func decrementCount(){
         self.count -= 1
         self.lblCount.text = "\(self.count)"
     }
-    @objc private func incrementCount(){
+    @IBAction private func incrementCount(){
         self.count += 1
         self.lblCount.text = "\(self.count)"
-        self.lblIncrement.text = "\(self.count)"
     }
     
     
